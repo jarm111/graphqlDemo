@@ -1,1 +1,1 @@
-# graphqlDemo
+# GraphGL Demo
