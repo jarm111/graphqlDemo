@@ -14,16 +14,43 @@ GraphGL:ssä palvelimella ei tarvitse kuin yksi endpointti, josta kaikki tarpeel
 
 GraphQL soveltuu REST APIa paremmin nopesti kehittyville sovelluksille joustavan luonteensa takia. Monet muutokset clienttiin eivät tarvitse muutoksia serverille. Esimerkiksi jos viimeisimpiä seuraajia ei ladatakaan enää etusivulla ei kyselystä tarvitse kuin poistaa followers osa, joilloin palvelin ei palauta tiedot kuin käyttäjästä ja hänen postauksistaan.  
 
-![Saman datan haku QraphQL endpointista](https://imgur.com/uY50GHz.png)
+![Datan haku QraphQL endpointista](https://imgur.com/uY50GHz.png)
+
+## GraphQL SDL (Schema Definition Language)
+GraphQL malli määritellään vahvasti tyypitetyllä syntaksilla. Mallissa (schema) on kolme juurityyppiä `Query`, `Mutation` ja `Subcription`. Juurityypit vastaavat kolmea GrapQL:n operaatiota.
+
+```
+type Query {
+  info: String
+  message(_id: String): Message
+  allMessages: [Message!]
+}
+
+type Mutation {
+  createMessage(msg: String!): Message!
+}
+
+# Uusi tyyppi ja sen määritys
+type Message {
+  _id: ID!
+  msg: String!
+  user: String
+}
+
+```
+https://www.prisma.io/blog/graphql-sdl-schema-definition-language-6755bcb9ce51
 
 ### Lähteet
 [qraphql.org](https://graphql.org/)
 
-[Fullstack tutoriaali sarja](https://www.howtographql.com/)
+[Tutoriaali jota mukaillen demo rakennettu](https://www.howtographql.com/)
+
+[GraphQL Node.js tutoriaali](https://www.howtographql.com/graphql-js/0-introduction/)
 
 ## Asennus
 1. Node.js, versio 8.x. tai 10.x. [nodejs.org]
 2. Angular cli  `npm install -g @angular/cli `
 3. Aja `npm install ` molemmissa kansioissa
-4. käynnistä backend komennolla `npm start `
-5. ja frontend komennolla `ng serve`
+4. Lisää .env tiedosto graphql_backend kansioon
+5. käynnistä backend komennolla `npm start `
+6. ja frontend komennolla `ng serve`

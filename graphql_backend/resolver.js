@@ -1,16 +1,24 @@
+var mongoose = require("mongoose");
+var Messages = mongoose.model("Messages");
+
 var resolver = {
-    hello: () => {
-      return 'Hello world!';
-    },
-    quoteOfTheDay: () => {
-        return Math.random() < 0.5 ? 'Take it easy' : 'Salvation lies within';
-      },
-      random: () => {
-        return Math.random();
-      },
-      rollThreeDice: () => {
-        return [1, 2, 3].map(_ => 1 + Math.floor(Math.random() * 6));
-      },
-  };
+  info() {
+    return 'Tämä on QraphQL API';
+  },
+
+  allMessages() {
+    return Messages.find();
+  },
+
+  createMessage(req) {
+    return Messages.create(req);
+  },
+
+  message(req){
+    return Messages.findById(req);
+  }
+
+
+};
 
 module.exports = resolver;

@@ -4,18 +4,23 @@ var {
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
-type RandomDie {
-  numSides: Int!
-  rollOnce: Int!
-  roll(numRolls: Int!): [Int]
-}
-
 
 type Query {
-  hello: String
-  quoteOfTheDay: String
-  random: Float!
-  rollThreeDice: [Int]
+  info: String
+  message(_id: String): Message
+  allMessages: [Message!]
 }
+
+type Mutation {
+  createMessage(msg: String!): Message!
+}
+
+# Uusi tyyppi ja sen määritys
+type Message {
+  _id: ID!
+  msg: String!
+  user: String
+}
+
 `);
 module.exports = schema;
