@@ -1,0 +1,14 @@
+.msgLine {
+    margin:2px;
+    padding:2px;
+}
+
+li {
+    display: block;
+}
+li:nth-child(even) {
+    background-color: #dddddd;
+}
+li:nth-child(odd) {
+    background-color: #e8e8e8;
+}

@@ -1,0 +1,13 @@
+<div>
+  <label>Kirjoita viesti:
+    <input #message />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(message.value); message.value=''">
+    Lähetä
+  </button>
+  
+</div>
+<div>
+  <li class="msgLine" *ngFor="let message of messages" >{{message.msg}}</li>
+</div>

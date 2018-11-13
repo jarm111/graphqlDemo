@@ -7,14 +7,14 @@ var resolver = {
   },
 
   allMessages() {
-    return Messages.find();
+    return Messages.find().sort({_id: -1});
   },
 
   createMessage(req) {
     return Messages.create(req);
   },
 
-  message(req){
+  message(req) {
     return Messages.findById(req);
   }
 

@@ -17,7 +17,7 @@ GraphQL soveltuu REST APIa paremmin nopesti kehittyville sovelluksille joustavan
 ![Datan haku QraphQL endpointista](https://imgur.com/uY50GHz.png)
 
 ## GraphQL SDL (Schema Definition Language)
-GraphQL malli määritellään vahvasti tyypitetyllä syntaksilla. Mallissa (schema) on kolme juurityyppiä `Query`, `Mutation` ja `Subcription`. Juurityypit vastaavat kolmea GrapQL:n operaatiota.
+GraphQL malli määritellään vahvasti tyypitetyllä syntaksilla. Mallissa (schema) on kolme juurityyppiä `Query`, `Mutation` ja `Subcription`. Juurityypit vastaavat kolmea GrapQL:n operaatiota. Malliin voi luoda myös omia tyyppejä kuten esimerkissä oleva ´Message´ tyyppi.
 
 ```
 type Query {
@@ -43,9 +43,12 @@ https://www.prisma.io/blog/graphql-sdl-schema-definition-language-6755bcb9ce51
 ### Lähteet
 [qraphql.org](https://graphql.org/)
 
-[Tutoriaali jota mukaillen demo rakennettu](https://www.howtographql.com/)
-
+[Yleinen GraphQL esittely lopussa tutoriaaleja eri tekniikoille](https://www.howtographql.com/)
 [GraphQL Node.js tutoriaali](https://www.howtographql.com/graphql-js/0-introduction/)
+[Angular GraphQL tutoriaali](https://medium.com/codingthesmartway-com-blog/apollo-client-for-angular-making-use-of-graphql-8d9a571e020c)
+
+## Frontend notes sdasdäasödaslökäd
+Esimerkki frontti tehty angularilla, angulariin tarvitsee asentaa [Apollo client](https://www.apollographql.com/) jotta sovellus tukee grapql:ää. Apollo tukee myös muita JavaScript frameworkkejä kuten Reactia ja Vue.js:ää
 
 ## Asennus
 1. Node.js, versio 8.x. tai 10.x. [nodejs.org]
@@ -54,3 +57,6 @@ https://www.prisma.io/blog/graphql-sdl-schema-definition-language-6755bcb9ce51
 4. Lisää .env tiedosto graphql_backend kansioon
 5. käynnistä backend komennolla `npm start `
 6. ja frontend komennolla `ng serve`
+
+## Tehtävä
+ 
