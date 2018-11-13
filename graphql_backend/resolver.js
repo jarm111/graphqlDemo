@@ -1,6 +1,10 @@
 var mongoose = require("mongoose");
 var Messages = mongoose.model("Messages");
 
+/*
+Funktiot jotka käsittelevät erilaiset queryt jotka on esitelty schemassa
+*/
+
 var resolver = {
   info() {
     return 'Tämä on QraphQL API';
