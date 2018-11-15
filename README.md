@@ -1,6 +1,6 @@
-# GraphGL demo
+# GraphQL demo
 
-## QraphQL vs. REST
+## GraphQL vs. REST
 Yleisimmät ongelmat rest apissa liittyvät haetun datan tarpeellisuuteen, dataa on joko liikaa tai yhdestä endpointista ei saada kaikkea tarpeellista dataa jolloin hakujen määrä kasvaa. Näistä seuraa yleensä turhaa liikennettä ja aplikaatio saattaa tuntua hitaalta sekä käyttää turhaan asiakkaan mobiilidataa. GraphQL pyrkii poistamaan nämä ongelmat mahdollistamalla kaiken tarvittavan datan noutamisen yhdestä endpointista. Lisäksi palvelin toimittaa asiakasohjelmalle vain sen pyytämän datan jolloin vältytään turhalta liikenteeltä.
 
 GraphQL asettaa clientin suorituskyvyn etusijalle.
