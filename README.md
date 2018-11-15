@@ -59,7 +59,7 @@ Kyselyt (queryt) suoritetaan resolver funktioissa, jotka palauttavat scheman muk
 ## Demosta
 Demon frontti on tehty angularilla, angulariin tarvitsee asentaa [Apollo client](https://www.apollographql.com/) jotta sovellukseen saadaan helposti graphql tuki. Apollo tukee myös muita JavaScript frameworkkejä kuten Reactia ja Vue.js:ää.
 
-Backendinä on node-express palvelin johon lisätty QraphQL:n tarvitsemat kirjaustot, tietokantana mongodb
+Backendinä on node-express palvelin johon lisätty QraphQL:n tarvitsemat kirjastot, tietokantana mongodb
 
 ## Asennus
 0. Cloonaa tai lataa repository
@@ -77,6 +77,7 @@ Backendinä on node-express palvelin johon lisätty QraphQL:n tarvitsemat kirjau
 5. käynnistä backend komennolla `npm start `
 6. ja frontend komennolla `ng serve -o`
 
+Noden kehittämistä helpottaa nodemonin asennus `npm install -g nodemon`, ajetaan komennolla `nodemon server.js`. Nodemon tarkkailee tiedostoja ja käynnistää prosessin uudestaan muutosten yhteydessä.
 
 ## Tehtävä - tee jompikumpi
 1. Laajenna graphql:n schema ja resolver kattamaan tietokannasta löytyvät tiedot ´user´ ja ´title´. Käytä näitä jollain tavoin frontendissä. Esim. lisää viesteihin näkyviin otsikko ja nimimerkki, lisäksi viestin kirjoittamisen yhteydessä tallenna nimimerkki ja otsikko.
