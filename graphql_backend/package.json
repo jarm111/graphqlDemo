@@ -4,6 +4,7 @@
   "description": "GraphQL demo / example backend",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jon Pekkonen",
@@ -15,5 +16,8 @@
     "express-graphql": "^0.7.1",
     "graphql": "^0.13.2",
     "mongoose": "^5.3.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
