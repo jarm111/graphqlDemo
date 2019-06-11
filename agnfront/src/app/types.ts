@@ -4,6 +4,8 @@
 export type Message = {
     _id: string;
     msg: string;
+    title: string;
+    user: string;
 };
 
 export type Query = {
