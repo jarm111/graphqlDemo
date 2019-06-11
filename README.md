@@ -70,9 +70,8 @@ Backendinä on node-express palvelin johon lisätty QraphQL:n tarvitsemat kirjas
     ```
     /graphql_backend/.env
 
-    PORT=3000
-    DB_USER=websk
-    DB_PW=Demo2018-11-15
+    PORT=4600
+    DB_URI=mongodb://localhost:27017/graphql-demo
     ```
 5. käynnistä backend komennolla `npm start `
 6. ja frontend komennolla `ng serve -o`
