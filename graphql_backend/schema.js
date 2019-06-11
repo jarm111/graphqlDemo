@@ -12,14 +12,16 @@ type Query {
 }
 
 type Mutation {
-  createMessage(msg: String!): Message!
+  createMessage(title: String, user: String, msg: String!): Message!
 }
 
 # Uusi tyyppi ja sen määritys
 type Message {
   _id: ID!
-  msg: String!
+  title: String
   user: String
+  msg: String!
+  
 }
 
 `);
