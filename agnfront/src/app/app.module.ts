@@ -25,7 +25,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  graphqlServerUrl = 'http://localhost:3000/graphql';
+  graphqlServerUrl = 'http://localhost:4600/graphql';
 
   constructor(apollo: Apollo, httpLink: HttpLink) {
     apollo.create({
