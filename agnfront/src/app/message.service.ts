@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 import { catchError, map, tap } from 'rxjs/operators';
+import { Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +16,11 @@ export class MessageService {
 
   // mutation query uuden viestin lähettämiseen
   createMessageMutation = gql`
-  mutation createMessage($msg: String!) {
-    createMessage(msg: $msg) {
+  mutation createMessage($title: String, $user: String, $msg: String!) {
+    createMessage(title: $title, user: $user, msg: $msg) {
       _id
+      title
+      user
       msg
     }}
   `;
@@ -27,6 +30,8 @@ export class MessageService {
     return this.apollo.mutate({
       mutation: this.createMessageMutation,
       variables: {
+        title: message.title,
+        user: message.user,
         msg: message.msg
       }
     });
@@ -38,6 +43,8 @@ export class MessageService {
         query {
           allMessages {
             _id
+            title
+            user
             msg
           }
         }
