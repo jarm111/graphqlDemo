@@ -10,7 +10,7 @@ require('dotenv').config();
 const port = process.env.PORT || 3000;
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://'+process.env.DB_USER+':'+process.env.DB_PW+'@ds161653.mlab.com:61653/graphql_demo',{ useNewUrlParser: true})
+mongoose.connect(process.env.DB_URI, { useNewUrlParser: true})
 .then(
   () => { console.log('Yhdistetty tietokantaan'); },
   err => { console.log(err); }
