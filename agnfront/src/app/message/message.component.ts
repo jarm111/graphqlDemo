@@ -19,10 +19,10 @@ export class MessageComponent implements OnInit {
     this.refresh();
   }
 
-  add(msg: string): void {
+  add(title: string, user: string, msg: string): void {
     msg = msg.trim();
     if (!msg) { return; }
-    this.messageService.addMsg({ msg } as Message)
+    this.messageService.addMsg({ title, user, msg } as Message)
       .subscribe(res => {
         console.log(res);
       //  this.refresh();

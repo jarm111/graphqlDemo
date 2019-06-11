@@ -1,13 +1,18 @@
 <div>
-  <label>Kirjoita viesti:
-    <input #message />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(message.value); message.value=''">
-    Lähetä
-  </button>
+  <form>
+    <label for="title">Otsikko</label>
+    <input type="text" id="title" #title />
+    <label for="user">Nimimerkki</label>
+    <input type="text" id="user" #user />
+    <label for="message">Viesti</label>
+    <input type="text" id="message" #message />
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(title.value, user.value, message.value); title.value=''; user.value=''; message.value='';">
+      Lähetä
+    </button>
+</form>
   
 </div>
 <div>
-  <li class="msgLine" *ngFor="let message of messages" >{{message.msg}}</li>
+  <li class="msgLine" *ngFor="let message of messages" >Otsikko: {{message.title}}, Käyttäjä: {{message.user}}, Viesti: {{message.msg}}</li>
 </div>
